@@ -83,10 +83,10 @@ WSGI_APPLICATION = 'django_crud_api.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-print(os.getenv('DATABASE_URL'))
+print(os.getenv('DATABASE_PUBLIC_URL'))
 
 DATABASES = {
-    'default': dj_database_url.config(default=os.getenv('DATABASE_URL', 'sqlite:///db.sqlite3'))
+    'default': dj_database_url.config(default=os.getenv('DATABASE_PUBLIC_URL', 'sqlite:///db.sqlite3'))
 }
 
 
